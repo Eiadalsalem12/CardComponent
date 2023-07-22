@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  background-color: #020205;
+  width: 100%;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  height: 50%;
+  background-color: #0b666a;
+}
+
+.imgContainer {
+  position: relative; /* Added relative positioning */
+  background-image: url("/image-header-desktop.jpg");
+  background-size: cover;
+  width: 50%;
+  max-width: 100%;
+}
+
+.imgContainer::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Adjust the positioning as per your requirement */
+  left: 0;
+  width: 100%; /* Use 100% to cover the whole container */
+  height: 100%; /* Use 100% to cover the whole container */
+  background-color: rgba(151, 254, 237, 0.3);
+}
+
+.textContainer {
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+}
+
+.textContainer h2 {
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.textContainer span {
+  color: #97feed;
+}
+
+.textContainer p {
+  margin: 15px 0;
+  font-size: 20px;
+  color: rgb(190, 190, 190);
+}
+
+.Companeys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  width: 100%;
+  height: 60%;
+}
+
+.Companeys .itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.itemContainer h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: white;
+}
+
+@media (max-width: 980px) {
+  .textContainer {
+    padding: 45px;
+  }
+
+  .textContainer h2 {
+    font-size: 30px;
+  }
+
+  .Companeys {
+    height: 60%;
+  }
+}
+
+@media (max-width: 947px) {
+  .textContainer {
+    padding: 40px;
+  }
+  .Companeys {
+    height: 50%;
+  }
+}
+
+@media (max-width: 815px) {
+  .Companeys {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 745px) {
+  .Companeys {
+    height: 35%;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 697px) {
+  .Companeys {
+    height: 25%;
+    gap: 15px;
+  }
+}
+
+@media (max-width:653px) {
+    .textContainer p {
+        font-size: 15px;
+    }
+
+    .Companeys .itemContainer {
+        padding: 15px 7px;
+    }
+}
+
+@media (max-width:600px) {
+    .itemContainer h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:530px) {
+    .textContainer {
+        padding: 35px;
+    }
+    .textContainer h2 {
+        font-size: 25px;
+    }
+    .Companeys {
+        height: 50%;
+        gap: 10px;
+    }
+    .itemContainer h2{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:500px) {
+    .Companeys {
+        height: 35%;
+        gap: 20px;
+    }
+
+    .Companeys .itemContainer {
+        padding: 15px 5px;
+    }
+
+    .itemContainer h4{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    height: 98%;
+  }
+
+  .textContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    height: 95%;
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+  .Companeys {
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgContainer{
+    padding: 5px;
+  }
+  .itemContainer h2 {
+    font-size: 20px;
+  }
+
+  .itemContainer h4 {
+    font-size: 15px;
+  }
+
+  .imgContainer {
+    align-self: flex-start;
+    width: 100%;
+    max-height: 50%;
+    height: 50%;
+  }
+}
